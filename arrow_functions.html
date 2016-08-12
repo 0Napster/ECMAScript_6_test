@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+        // fat arrow
+        //        var greeting = (firstName) => console.log("salut " + firstName);
+        //        greeting("sam");
+
+
+        // Ancienne façon
+        var dog = {
+            name: "Le chien",
+            toys: ['baton', 'balle'],
+            getToys: function () {
+                var self = this;
+                this.toys.forEach(function (toy) {
+                    var sentence = self.name + "joue avec 1 " + toy;
+                    console.log(sentence);
+                })
+            }
+        };
+
+        // Version arrow function
+        var dog = {
+            name: "Le chien",
+            toys: ['baton', 'balle'],
+            getToys: function () {
+                this.toys.forEach((toy) => {
+                    var sentence = this.name + "joue avec 1 " + toy;
+                    console.log(sentence);
+                })
+            }
+        };
+
+        dog.getToys();
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>

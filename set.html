@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+        //        var brands = new Set();
+        //        brands.add("Honda");
+        //        brands.add("ducati").add("Triumph").add("Honda").add("Kawasaki");
+        //        console.log(brands);
+
+        var brandsArray = ["Honda", "Ducati", 'Kawasaki', 'Honda'];
+        var brands = new Set(brandsArray);
+        
+        brands.forEach(function (val, val2, mySet) {
+           console.log(val);
+           console.log(val2);
+           console.log(mySet);
+        });
+        console.log(brands.has("Honda"));
+        console.log(brands);
+        console.log(brands.delete("Kawasaki"));
+        console.log(brands);
+        console.log(brands.clear());
+        console.log(brands);
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>

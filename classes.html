@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+
+        /* ES5 */
+        //        function Vehicule(brand, color) {
+        //            this.brand = brand;
+        //            this.color = color;
+        //
+        //        }
+        //
+        //        var myOtherVehicule = new Vehicule("nissan2", "rouge2");
+        //        Vehicule.prototype.hoonk = function () {
+        //            console.log('tuuuuuuuuuut');
+        //        };
+
+
+        /* ES6 */
+        class Vehicules {
+            constructor(brand, color) {
+                this.brand = brand;
+                this.color = color;
+            }
+
+            hoonk() {
+                console.log('tuuuuuut');
+            }
+        }
+
+        let myVehicule = new Vehicules("nissan", 'rouge');
+
+        console.log(myVehicule);
+        myVehicule.hoonk();
+
+
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>

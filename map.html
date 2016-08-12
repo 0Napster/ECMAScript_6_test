@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+        var books = new Map();
+        books.set("Umberto Eco", "Le nom de la rose");
+        console.log(books);
+        books.set("Michel Tournier", "Le roi des aulnes");
+        console.log(books.size);
+        console.log(books);
+
+        //console.log(books.get("Umberto Eco"));
+
+        books.forEach(function (val, key, myMap) {
+            console.log(val);
+            console.log(key);
+            console.log(myMap);
+        })
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>

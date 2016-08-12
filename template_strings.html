@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+        let womanName = "Mme azerty",
+                manName = "Mr qsdfg";
+        var processTemplate = function (param1, param2, param3) {
+            console.log('param1', param1);
+            console.log('param2', param2);
+            console.log('param3', param3);
+        };
+        let speech = processTemplate`Madame${womanName}, Monsieur${manName},
+
+
+
+balalalalalalal,
+
+ezaeazezaez,
+ezaeaze,
+
+Cordialement
+`;
+        console.log(speech);
+
+
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>

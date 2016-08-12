@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+        function* toto() {
+            let a = 10;
+            let b = 15;
+            console.log(a + b);
+            yield;
+            console.log("pas atteint à la première execution")
+            yield;
+            console.log("fini !");
+        }
+        let totoIterator = toto()
+        totoIterator.next();
+        totoIterator.next();
+        totoIterator.next();
+
+        function* takeOff() {
+            yield "trois";
+            yield "deux";
+            yield "un";
+            yield "zéro";
+            yield "décollage";
+        }
+        var toItr = takeOff();
+        var handle = setInterval(function () {
+            var instruction = toItr.next();
+            if (instruction.done) {
+                clearInterval(handle)
+            } else {
+                console.log(instruction);
+            }
+        }, 1000)
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>

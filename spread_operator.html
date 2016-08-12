@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+    <script type="text/babel">
+        //----------------------------------------------------------------------------------------------------------------------
+        /*tableau a plusieurs dimensions */
+                var fruits = ['bannanes', 'pommes'];
+                var vegetables = ['poireaux', 'pattates'];
+                var food = [fruits, vegetables];
+
+        /*spread operator*/
+        //var fruits = ['bannanes', 'pommes'];
+        //var vegetables = ['poireaux', 'pattates'];
+        //var food = [...fruits, ...vegetables, 'mangues', 'blé'];
+
+        console.log(food);
+
+        //----------------------------------------------------------------------------------------------------------------------
+
+        //        var mixer = function (food, foodBis) {
+        //            console.log(food + " avec " + foodBis);
+        //        };
+        //
+        //        var ingredients = ["Pommes", "abricots"];
+
+        /*appel classique*/
+        //        mixer("Pommes", "abricots");
+
+        /* appel spread operator*/
+        //mixer(...ingredients);
+
+        //----------------------------------------------------------------------------------------------------------------------
+
+//        var mixer = function () {
+//            console.log(arguments); // FAUX TABLEAU !!!
+//            console.log(arguments.join(" - ")); // NE FONCTIONNE PAS
+//        };
+//
+//        mixer("Pommes", "figues", "poires");
+
+        //----------------------------------------------------------------------------------------------------------------------
+
+        //        var mixer = function (...ingredients) {
+        //            console.log(ingredients.join(" - "));
+        //        };
+        //
+        //        mixer("Pommes", "figues", "poires");
+    </script>
+    <title>ES6 via babel</title>
+</head>
+<body>
+</body>
+</html>
